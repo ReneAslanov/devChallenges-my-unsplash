@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Noto Sans, serif;
+}
+
+:root{
+    --grey: #BDBDBD;
+    --dark-grey: #4F4F4F;
+    --dark-grey-2: #333333;
+    --green: #3DB46D;
+    --red: #EB5757;
+    --step-count: 22;
+    --step-mask-position: 0;
+}

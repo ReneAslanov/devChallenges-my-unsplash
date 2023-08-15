@@ -1,0 +1,252 @@
+.nav-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 4rem;
+    position: relative;
+}
+
+.nav-left-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.nav-input-wrapper{
+    display: flex;
+    justify-content: center;
+    border: 1px solid var(--grey);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.nav-input-label{
+    width: calc(24px + 1rem);
+    height: calc(24px + 2rem);
+    padding: 1rem;
+}
+
+.nav-input-icon{
+    width: 24px;
+    height: 24px;
+}
+
+.nav-search{
+    width: 100%;
+    padding: 1rem;
+    border: none;
+}
+
+.nav-search::placeholder{
+    color: var(--grey);
+}
+
+.nav-search:focus{
+    outline: none;
+}
+
+.nav-button-wrapper{
+    position: relative;
+    font-size: 14px;
+}
+
+.nav-button{
+    background-color: var(--green);
+    padding: 1rem;
+    border-radius: 12px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    /*-webkit-mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");*/
+    /*-webkit-mask-image: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
+    -webkit-mask-size: cover;
+    -webkit-mask-mode: alpha;
+    -webkit-mask-type: luminance;
+    mask-type: luminance;
+    mask-mode: luminance;
+    mask-size: cover;
+    mask-image: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
+    -webkit-animation: ani 1s steps(22) forwards;*/
+    /*background-size: contain;*/
+    /*-webkit-mask-image: linear-gradient(to bottom, transparent 5%, black 75%);
+    mask-image: linear-gradient(to bottom, transparent 25%, black 75%);*/
+    -webkit-mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
+	mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
+	-webkit-mask-size: 2300% 100%;
+	mask-size: 2300% 100%;
+
+
+    /*-webkit-animation: ani2 1s steps(22) forwards;
+    animation: ani2 1s steps(22) forwards;*/
+
+
+    -webkit-mask-position: var(--step-mask-position);
+    -webkit-mask-repeat: no-repeat;
+    mask-position: var(--step-mask-position);
+    mask-repeat: no-repeat;
+    /*transition: all .5s steps(var(--step-count));
+    transition-delay: 0;*/
+    height: 100%;
+    position: relative;
+}
+
+.nav-button:hover{
+    box-shadow: 0 0px 5px 3px rgba(0,0,0,0.3);
+    color: #fff;
+    /*animation: ani 1s steps(22) forwards;*/
+
+    /*-webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+    transition: all .5s steps(var(--step-count));*/
+
+    /*-webkit-animation: ani 0.7s steps(22) forwards;
+    animation: ani 0.7s steps(22) forwards;*/
+}
+
+.nav-button-wrapper::before{
+    box-sizing: border-box;
+    content: "Add a photo";
+    color: var(--green);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--green);
+    border-radius: 12px;
+}
+
+/*.nav-button:hover*/
+
+@-webkit-keyframes ani {
+    from {
+        -webkit-mask-position: 0;
+        mask-position: 0;
+    }
+
+    to {
+        -webkit-mask-position: 100% 0;
+        mask-position: 100% 0;
+    }
+}
+
+@keyframes ani {
+    from {
+        -webkit-mask-position: 0;
+        mask-position: 0;
+    }
+
+    to {
+        -webkit-mask-position: 100% 0;
+        mask-position: 100% 0;
+    }
+}
+
+
+@-webkit-keyframes ani2 {
+    from {
+        -webkit-mask-position: 2300%;
+        mask-position: 2300%;
+    }
+
+    to {
+        -webkit-mask-position: 0;
+        mask-position: 0;
+    }
+}
+
+@keyframes ani2 {
+    from {
+        -webkit-mask-position: 2300%;
+        mask-position: 2300%;
+    }
+
+    to {
+        -webkit-mask-position: 0;
+        mask-position: 0;
+    }
+}
+
+
+
+.nav-right-mobile-wrapper{
+    width: 40px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    position: relative;
+    animation: fade-in .1s ease-in;
+    z-index: 10;
+}
+
+.nav-right-mobile-wrapper:nth-child(even)
+{
+    animation: fade-in .5s ease-in;
+}
+
+@keyframes fade-in {
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+.nav-right-bar{
+    width: 100%;
+    height: 5px;
+    border-radius: 3px;
+    background-color: #000;
+    transition: all .2s ease-in-out;
+}
+
+.rotate-bar-one{
+    position: absolute;
+    transform: translateY(14px) rotate(45deg) translateX(-2px);
+    transition: transform .2s ease-in-out;
+}
+
+.rotate-bar-two{
+    position: absolute;
+    bottom: 0;
+    transform: translateY(-14px) rotate(-45deg) translateX(-2px);
+    transition: transform .2s ease-in-out;
+}
+
+.nav-right-sidebar{
+    position:fixed;
+    top: 0;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    max-width: 250px;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: -5px 0 5px rgba(0,0,0,0.3);
+    z-index: 9;
+    padding: 6rem 1rem 0;
+    gap: 2rem;
+    align-items: flex-end;
+}
+
+.nav-right-opened{
+    display: flex;
+}
+
+@media (max-width: 550px)
+{
+    .nav-left-wrapper{
+        flex-direction: column;
+    }
+}

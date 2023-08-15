@@ -1,0 +1,13 @@
+.app-wrapper{
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem 6rem;
+}
+
+@media (max-width: 780px)
+{
+    .app-wrapper{
+        padding: 2rem 1rem;
+    }
+}
