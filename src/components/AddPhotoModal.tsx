@@ -30,7 +30,7 @@ function AddPhotoModal()
             label: labelRef.current ? labelRef.current.value : "",
             url: urlRef.current ? urlRef.current.value : ""
         }
-        fetch("http://localhost:3000/photos", {
+        fetch(/*"http://localhost:3000/photos"*/ "https://my-unsplash.adaptable.app/photos", {
             method: "POST",
             mode: "cors",
             headers: {

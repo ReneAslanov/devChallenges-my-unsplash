@@ -19,7 +19,7 @@ function DeletePhotoModal({id}: DeletePhotoProps)
     function handleDelete()
     {
         console.log(id);
-        fetch("http://localhost:3000/photos", {
+        fetch(/*"http://localhost:3000/photos"*/ "https://my-unsplash.adaptable.app/photos", {
             method: "DELETE",
             mode: "cors",
             headers: {

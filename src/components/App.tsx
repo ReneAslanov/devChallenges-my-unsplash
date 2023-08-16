@@ -20,14 +20,15 @@ function App() {
   const dispatch = useDispatch();
 
   useMemo(() => {
-    fetch("http://localhost:3000/photos", {
+    fetch(/*"http://localhost:3000/photos"*/ "https://my-unsplash.adaptable.app/photos", {
       method: "GET",
       mode: "cors",
       headers: {
         "Content-Type": "application/json",
         "Access-Control-Allow-Origin": "*",
       }
-    }).then(res => res.json())
+    })
+    .then(res => res.json())
     .then(res => {
       if(navState.query)
       {
@@ -45,7 +46,9 @@ function App() {
     })
     .catch((err) => {
       console.log(err);
-      dispatch(setToggle());
+      setTimeout(() => {
+        dispatch(setToggle());
+      }, 500)
     })
   }, [fetchToggle.toggle])
 
