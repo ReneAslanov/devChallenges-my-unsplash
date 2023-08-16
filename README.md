@@ -83,6 +83,7 @@ DB_HOST=your-host
 DB_USER=your-user
 DB_PASSWORD=your-password
 DB_DATABASE=your-database
+PORT=your-port
 
 ```
 
