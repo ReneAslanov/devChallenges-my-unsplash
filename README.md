@@ -8,7 +8,7 @@
 
 <div align="center">
   <h3>
-    <a href="https://{your-demo-link.your-domain}">
+    <a href="https://magical-begonia-80b959.netlify.app/">
       Demo
     </a>
     <span> | </span>
@@ -30,6 +30,7 @@
   - [Built With](#built-with)
 - [Features](#features)
 - [How to use](#how-to-use)
+- [Acknowledgements](#acknowledgements)
 - [Contact](#contact)
 
 <!-- OVERVIEW -->
@@ -87,6 +88,13 @@ PORT=your-port
 
 ```
 
+Furthermore you need to change the code a little, all fetches are currently done with an api that is being hosted, however if you want to run it locally you have to change those back to localhost, the files are:
+    - AddPhotoModal.tsx, line 33
+    - App.tsx, line 23
+    - DeletePhotoModal.tsx, line 22
+
+Inside the backend folder you need to change database.ts, I had to add an ssl certificate so it can be hosted, however you dont need it to run locally so just remove lines 17 - 21 and line 3 since you dont need it anymore.
+
 From your command line:
 
 ```bash
@@ -107,6 +115,10 @@ $ npm start
 $ cd ..
 $ npm start
 ```
+
+## Acknowledgements
+
+If you are having trouble finding a postgres Database to host your backend, i can recommend [Adaptable.io](https://adaptable.io/).
 
 ## Contact
 
