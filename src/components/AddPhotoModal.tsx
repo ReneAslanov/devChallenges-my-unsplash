@@ -40,8 +40,11 @@ function AddPhotoModal()
         })
         dispatch(addCard(newCard))
 
-        closeModal("modal-background-addPhoto", setVisible, dispatch)
-        dispatch(setToggle());
+        closeModal("modal-background-addPhoto", setVisible, dispatch);
+        setTimeout(() => {
+            dispatch(setToggle());
+        }, 1000)
+
     }
 
     return(
